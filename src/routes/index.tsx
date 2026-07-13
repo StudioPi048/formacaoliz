@@ -489,7 +489,7 @@ function Pricing() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-white px-10 py-5 text-lg font-medium text-primary shadow-glow transition hover:scale-[1.02]"
+            className="inline-flex items-center gap-3 rounded-full bg-primary px-10 py-5 text-lg font-medium text-primary-foreground shadow-glow transition hover:scale-[1.02] hover:bg-primary-glow"
           >
             Falar com a equipe no WhatsApp
             <span>→</span>
