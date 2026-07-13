@@ -86,8 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Formação Psicogenealogia LIZ 2026 — Turma 2 | Letícia Baccin" },
       { name: "twitter:description", content: "Formação online e ao vivo em Psicogenealogia Viva com Letícia Baccin. Turma 2 — início 17/07/2026. Autoconhecimento, terapia e propósito de alma." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/399db039-9278-4ad5-ab2f-325d48519cd9/id-preview-d70b1b10--7bc70869-c92a-4e27-b856-3adfc6566a2c.lovable.app-1783970215127.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/399db039-9278-4ad5-ab2f-325d48519cd9/id-preview-d70b1b10--7bc70869-c92a-4e27-b856-3adfc6566a2c.lovable.app-1783970215127.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c639f739-14d7-47f6-bdd0-4029e5e9680b/id-preview-7d7b9bc2--7bc70869-c92a-4e27-b856-3adfc6566a2c.lovable.app-1783970389104.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c639f739-14d7-47f6-bdd0-4029e5e9680b/id-preview-7d7b9bc2--7bc70869-c92a-4e27-b856-3adfc6566a2c.lovable.app-1783970389104.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
