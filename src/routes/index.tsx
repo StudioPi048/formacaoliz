@@ -238,7 +238,7 @@ function Hero() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-medium text-primary shadow-elegant transition hover:scale-[1.02]"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-medium text-primary-foreground shadow-elegant transition hover:scale-[1.02] hover:bg-primary-glow"
           >
             Garantir minha vaga
             <span className="transition group-hover:translate-x-1">→</span>
