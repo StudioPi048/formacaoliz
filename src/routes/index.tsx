@@ -507,34 +507,34 @@ function PriceCard({
   country: string; currency: string; full: string; special: string; installment: string; highlight?: boolean;
 }) {
   return (
-    <div className={`relative rounded-3xl p-8 ${highlight ? "bg-white text-ink shadow-elegant" : "border border-white/20 bg-white/5 backdrop-blur"}`}>
+    <div className={`relative rounded-3xl p-8 ${highlight ? "bg-gradient-accent text-[#1A1A1A] shadow-elegant" : "border border-white/15 bg-white/5 backdrop-blur text-white"}`}>
       {highlight && (
-        <span className="absolute -top-3 left-8 rounded-full bg-accent px-4 py-1 text-xs font-medium uppercase tracking-wider text-white">
+        <span className="absolute -top-3 left-8 rounded-full bg-[#1A1A1A] px-4 py-1 text-xs font-medium uppercase tracking-wider text-primary-glow">
           Mais escolhido
         </span>
       )}
-      <div className={`text-xs uppercase tracking-[0.2em] ${highlight ? "text-accent" : "text-lilac-soft"}`}>
+      <div className={`text-xs uppercase tracking-[0.2em] ${highlight ? "text-[#1A1A1A]/70" : "text-primary-glow"}`}>
         {country}
       </div>
       <div className="mt-6 flex items-baseline gap-2">
-        <span className={`text-sm line-through ${highlight ? "text-muted-foreground" : "text-white/50"}`}>
+        <span className={`text-sm line-through ${highlight ? "text-[#1A1A1A]/60" : "text-white/60"}`}>
           {currency} {full}
         </span>
-        <span className={`rounded-full px-2 py-0.5 text-xs ${highlight ? "bg-lilac-soft text-primary" : "bg-white/20 text-white"}`}>
+        <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${highlight ? "bg-[#1A1A1A] text-primary-glow" : "bg-primary/20 text-primary-glow"}`}>
           30% OFF
         </span>
       </div>
       <div className="mt-2 flex items-baseline gap-2">
         <span className="font-display text-6xl">{currency} {special}</span>
       </div>
-      <div className={`mt-2 text-sm ${highlight ? "text-muted-foreground" : "text-white/70"}`}>
+      <div className={`mt-2 text-sm ${highlight ? "text-[#1A1A1A]/80" : "text-white/80"}`}>
         à vista · ou {installment}
       </div>
 
-      <ul className={`mt-8 space-y-3 border-t pt-6 text-sm ${highlight ? "border-border" : "border-white/15"}`}>
+      <ul className={`mt-8 space-y-3 border-t pt-6 text-sm ${highlight ? "border-[#1A1A1A]/20" : "border-white/15"}`}>
         {["4 níveis completos", "Classes Magistrais (CM2 + CM3)", "Decodificação de Nomes (16h)", "Mentorias ao vivo", "2 anos de acesso Hotmart"].map((f) => (
           <li key={f} className="flex items-start gap-3">
-            <span className={`mt-1 h-1.5 w-1.5 rounded-full ${highlight ? "bg-accent" : "bg-lilac"}`} />
+            <span className={`mt-1 h-1.5 w-1.5 rounded-full ${highlight ? "bg-[#1A1A1A]" : "bg-primary"}`} />
             {f}
           </li>
         ))}
