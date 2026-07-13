@@ -217,7 +217,7 @@ function Hero() {
           alt="Escola LIZ"
           className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-[0_8px_30px_rgba(212,175,55,0.4)] animate-float"
         />
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-lilac-soft backdrop-blur">
+        <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary-glow backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-lilac animate-pulse" />
           Turma 2 · Início 17 · 07 · 2026
         </span>
@@ -238,7 +238,7 @@ function Hero() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-medium text-primary shadow-elegant transition hover:scale-[1.02]"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-medium text-primary-foreground shadow-elegant transition hover:scale-[1.02] hover:bg-primary-glow"
           >
             Garantir minha vaga
             <span className="transition group-hover:translate-x-1">→</span>
@@ -279,8 +279,8 @@ function Authority() {
             alt="Letícia Kuchockowolec Baccin, fundadora da Escola LIZ"
             className="absolute inset-0 h-full w-full object-cover object-top"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent p-8 text-white">
-            <div className="font-display text-2xl italic">Letícia Baccin</div>
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent p-8 text-white">
+            <div className="font-display text-2xl italic text-primary-glow">Letícia Baccin</div>
             <div className="text-sm text-white/80">Fundadora · Escola LIZ</div>
           </div>
         </div>
@@ -373,7 +373,7 @@ function Structure() {
 
         <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {modules.map((m) => (
-            <div key={m.level} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-border/60">
+            <div key={m.level} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:-translate-y-1 hover:border-primary/40 hover:bg-white/10">
               <div className="text-xs uppercase tracking-wider text-accent">{m.level}</div>
               <h3 className="mt-2 font-display text-2xl text-ink">{m.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.desc}</p>
@@ -382,22 +382,22 @@ function Structure() {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          <div className="rounded-3xl bg-primary p-8 text-primary-foreground shadow-elegant">
+          <div className="rounded-3xl bg-gradient-accent p-8 text-[#1A1A1A] shadow-elegant">
             <h3 className="font-display text-2xl">Classes Magistrais</h3>
             <ul className="mt-6 space-y-4">
               {magistrais.map((c) => (
-                <li key={c.code} className="flex items-start gap-4 border-t border-white/15 pt-4 first:border-0 first:pt-0">
-                  <span className="font-display text-lg text-lilac-soft">{c.code}</span>
+                <li key={c.code} className="flex items-start gap-4 border-t border-[#1A1A1A]/20 pt-4 first:border-0 first:pt-0">
+                  <span className="font-display text-lg text-[#1A1A1A]/70">{c.code}</span>
                   <div>
                     <div className="font-medium">{c.title}</div>
-                    <div className="text-xs uppercase tracking-wider text-white/60">{c.note}</div>
+                    <div className="text-xs uppercase tracking-wider text-[#1A1A1A]/70">{c.note}</div>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-border bg-white p-8">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
             <h3 className="font-display text-2xl text-ink">Decodificação de Nomes</h3>
             <p className="mt-3 text-muted-foreground">
               Compreenda o poder simbólico e vibracional dos nomes próprios.
@@ -489,7 +489,7 @@ function Pricing() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-white px-10 py-5 text-lg font-medium text-primary shadow-glow transition hover:scale-[1.02]"
+            className="inline-flex items-center gap-3 rounded-full bg-primary px-10 py-5 text-lg font-medium text-primary-foreground shadow-glow transition hover:scale-[1.02] hover:bg-primary-glow"
           >
             Falar com a equipe no WhatsApp
             <span>→</span>
@@ -507,34 +507,34 @@ function PriceCard({
   country: string; currency: string; full: string; special: string; installment: string; highlight?: boolean;
 }) {
   return (
-    <div className={`relative rounded-3xl p-8 ${highlight ? "bg-white text-ink shadow-elegant" : "border border-white/20 bg-white/5 backdrop-blur"}`}>
+    <div className={`relative rounded-3xl p-8 ${highlight ? "bg-gradient-accent text-[#1A1A1A] shadow-elegant" : "border border-white/15 bg-white/5 backdrop-blur text-white"}`}>
       {highlight && (
-        <span className="absolute -top-3 left-8 rounded-full bg-accent px-4 py-1 text-xs font-medium uppercase tracking-wider text-white">
+        <span className="absolute -top-3 left-8 rounded-full bg-[#1A1A1A] px-4 py-1 text-xs font-medium uppercase tracking-wider text-primary-glow">
           Mais escolhido
         </span>
       )}
-      <div className={`text-xs uppercase tracking-[0.2em] ${highlight ? "text-accent" : "text-lilac-soft"}`}>
+      <div className={`text-xs uppercase tracking-[0.2em] ${highlight ? "text-[#1A1A1A]/70" : "text-primary-glow"}`}>
         {country}
       </div>
       <div className="mt-6 flex items-baseline gap-2">
-        <span className={`text-sm line-through ${highlight ? "text-muted-foreground" : "text-white/50"}`}>
+        <span className={`text-sm line-through ${highlight ? "text-[#1A1A1A]/60" : "text-white/60"}`}>
           {currency} {full}
         </span>
-        <span className={`rounded-full px-2 py-0.5 text-xs ${highlight ? "bg-lilac-soft text-primary" : "bg-white/20 text-white"}`}>
+        <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${highlight ? "bg-[#1A1A1A] text-primary-glow" : "bg-primary/20 text-primary-glow"}`}>
           30% OFF
         </span>
       </div>
       <div className="mt-2 flex items-baseline gap-2">
         <span className="font-display text-6xl">{currency} {special}</span>
       </div>
-      <div className={`mt-2 text-sm ${highlight ? "text-muted-foreground" : "text-white/70"}`}>
+      <div className={`mt-2 text-sm ${highlight ? "text-[#1A1A1A]/80" : "text-white/80"}`}>
         à vista · ou {installment}
       </div>
 
-      <ul className={`mt-8 space-y-3 border-t pt-6 text-sm ${highlight ? "border-border" : "border-white/15"}`}>
+      <ul className={`mt-8 space-y-3 border-t pt-6 text-sm ${highlight ? "border-[#1A1A1A]/20" : "border-white/15"}`}>
         {["4 níveis completos", "Classes Magistrais (CM2 + CM3)", "Decodificação de Nomes (16h)", "Mentorias ao vivo", "2 anos de acesso Hotmart"].map((f) => (
           <li key={f} className="flex items-start gap-3">
-            <span className={`mt-1 h-1.5 w-1.5 rounded-full ${highlight ? "bg-accent" : "bg-lilac"}`} />
+            <span className={`mt-1 h-1.5 w-1.5 rounded-full ${highlight ? "bg-[#1A1A1A]" : "bg-primary"}`} />
             {f}
           </li>
         ))}
@@ -583,7 +583,7 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-ink py-14 text-white/70">
+    <footer className="border-t border-white/10 bg-[#0A0A0A] py-14 text-white/70">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
         <div>
           <div className="font-display text-2xl text-white">Escola <span className="italic">LIZ</span></div>
