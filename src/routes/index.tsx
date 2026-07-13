@@ -163,15 +163,15 @@ function Authority() {
   return (
     <section id="autoridade" className="bg-gradient-soft py-28">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-[minmax(0,1fr)_1.2fr]">
-        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-accent shadow-elegant">
-          <div className="absolute inset-0 flex items-end p-8 text-white">
-            <div>
-              <div className="font-display text-2xl italic">Letícia Baccin</div>
-              <div className="text-sm text-white/80">Fundadora · Escola LIZ</div>
-            </div>
-          </div>
-          <div className="absolute right-4 top-4 rounded-full glass px-3 py-1 text-xs text-primary">
-            foto em breve
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl shadow-elegant">
+          <img
+            src={leticiaAsset.url}
+            alt="Letícia Kuchockowolec Baccin, fundadora da Escola LIZ"
+            className="absolute inset-0 h-full w-full object-cover object-top"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent p-8 text-white">
+            <div className="font-display text-2xl italic">Letícia Baccin</div>
+            <div className="text-sm text-white/80">Fundadora · Escola LIZ</div>
           </div>
         </div>
 
