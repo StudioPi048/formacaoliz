@@ -583,7 +583,7 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-ink py-14 text-white/70">
+    <footer className="border-t border-white/10 bg-[#0A0A0A] py-14 text-white/70">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
         <div>
           <div className="font-display text-2xl text-white">Escola <span className="italic">LIZ</span></div>
