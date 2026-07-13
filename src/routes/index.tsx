@@ -279,8 +279,8 @@ function Authority() {
             alt="Letícia Kuchockowolec Baccin, fundadora da Escola LIZ"
             className="absolute inset-0 h-full w-full object-cover object-top"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent p-8 text-white">
-            <div className="font-display text-2xl italic">Letícia Baccin</div>
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent p-8 text-white">
+            <div className="font-display text-2xl italic text-primary-glow">Letícia Baccin</div>
             <div className="text-sm text-white/80">Fundadora · Escola LIZ</div>
           </div>
         </div>
