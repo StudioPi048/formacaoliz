@@ -373,7 +373,7 @@ function Structure() {
 
         <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {modules.map((m) => (
-            <div key={m.level} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-border/60">
+            <div key={m.level} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:-translate-y-1 hover:border-primary/40 hover:bg-white/10">
               <div className="text-xs uppercase tracking-wider text-accent">{m.level}</div>
               <h3 className="mt-2 font-display text-2xl text-ink">{m.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.desc}</p>
