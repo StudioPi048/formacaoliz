@@ -223,7 +223,7 @@ function Hero() {
         </span>
 
         <h1 className="mt-8 font-display text-5xl leading-[1.05] md:text-7xl">
-          Formação <em className="text-lilac-soft">Psicogenealogia</em>
+          Formação <em className="text-yellow-400">Psicogenealogia</em>
           <br /> Viva 2026
         </h1>
 
