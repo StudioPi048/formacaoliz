@@ -382,15 +382,15 @@ function Structure() {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          <div className="rounded-3xl bg-primary p-8 text-primary-foreground shadow-elegant">
+          <div className="rounded-3xl bg-gradient-accent p-8 text-[#1A1A1A] shadow-elegant">
             <h3 className="font-display text-2xl">Classes Magistrais</h3>
             <ul className="mt-6 space-y-4">
               {magistrais.map((c) => (
-                <li key={c.code} className="flex items-start gap-4 border-t border-white/15 pt-4 first:border-0 first:pt-0">
-                  <span className="font-display text-lg text-lilac-soft">{c.code}</span>
+                <li key={c.code} className="flex items-start gap-4 border-t border-[#1A1A1A]/20 pt-4 first:border-0 first:pt-0">
+                  <span className="font-display text-lg text-[#1A1A1A]/70">{c.code}</span>
                   <div>
                     <div className="font-medium">{c.title}</div>
-                    <div className="text-xs uppercase tracking-wider text-white/60">{c.note}</div>
+                    <div className="text-xs uppercase tracking-wider text-[#1A1A1A]/70">{c.note}</div>
                   </div>
                 </li>
               ))}
