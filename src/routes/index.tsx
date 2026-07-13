@@ -217,7 +217,7 @@ function Hero() {
           alt="Escola LIZ"
           className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-[0_8px_30px_rgba(212,175,55,0.4)] animate-float"
         />
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-lilac-soft backdrop-blur">
+        <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary-glow backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-lilac animate-pulse" />
           Turma 2 · Início 17 · 07 · 2026
         </span>
