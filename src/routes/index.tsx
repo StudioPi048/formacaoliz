@@ -248,18 +248,22 @@ function Hero() {
           </a>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-6 border-t border-white/15 pt-8 text-left">
+        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
           {[
             ["+5.000", "alunos formados"],
             ["28 anos", "de trajetória da docente"],
             ["2 anos", "de acesso pela Hotmart"],
           ].map(([n, l]) => (
-            <div key={n}>
-              <div className="font-display text-3xl text-lilac-soft">{n}</div>
-              <div className="text-xs uppercase tracking-wider text-white/60">{l}</div>
+            <div
+              key={n}
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-white/10 hover:shadow-glow"
+            >
+              <div className="font-display text-3xl text-primary-glow">{n}</div>
+              <div className="mt-1 text-xs uppercase tracking-wider text-white/60">{l}</div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
