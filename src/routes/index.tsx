@@ -303,10 +303,25 @@ function Authority() {
 
           <div className="mt-8 flex flex-wrap gap-2">
             {["TEDx", "Autora", "Você S/A", "O Globo", "Viva Saúde", "+5.000 alunos"].map((t) => (
-              <span key={t} className="rounded-full border border-border bg-white px-4 py-1.5 text-sm text-primary">
+              <span key={t} className="rounded-full border border-border bg-card px-4 py-1.5 text-sm text-primary">
                 {t}
               </span>
             ))}
+          </div>
+
+          <div className="mt-10 border-t border-border pt-8">
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Como visto em</div>
+            <div className="mt-5 flex flex-wrap items-center gap-x-10 gap-y-4">
+              <span className="font-display text-2xl italic text-muted-foreground grayscale transition hover:text-primary hover:grayscale-0">
+                Você <span className="not-italic">S/A</span>
+              </span>
+              <span className="font-display text-2xl uppercase tracking-widest text-muted-foreground grayscale transition hover:text-primary hover:grayscale-0">
+                TED<span className="text-primary">x</span>
+              </span>
+              <span className="font-display text-2xl italic text-muted-foreground grayscale transition hover:text-primary hover:grayscale-0">
+                O Globo
+              </span>
+            </div>
           </div>
         </div>
       </div>
