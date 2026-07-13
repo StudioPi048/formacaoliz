@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import logoAsset from "@/assets/logo-liz.png.asset.json";
+import leticiaAsset from "@/assets/leticia-baccin.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -73,8 +75,9 @@ function Nav() {
   return (
     <header className="fixed top-0 z-50 w-full">
       <div className="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-full glass px-6 py-3">
-        <a href="#top" className="font-display text-xl tracking-tight text-primary">
-          Escola <span className="italic">LIZ</span>
+        <a href="#top" className="flex items-center gap-2.5 font-display text-xl tracking-tight text-primary">
+          <img src={logoAsset.url} alt="Escola LIZ" className="h-9 w-9 object-contain" />
+          Escola <span className="-ml-1 italic">LIZ</span>
         </a>
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
           <a href="#autoridade" className="hover:text-primary">Docente</a>
@@ -103,6 +106,11 @@ function Hero() {
       <div className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-primary-glow/40 blur-3xl animate-float" />
 
       <div className="relative mx-auto max-w-5xl px-6 text-center animate-fade-up">
+        <img
+          src={logoAsset.url}
+          alt="Escola LIZ"
+          className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-[0_8px_30px_rgba(212,175,55,0.4)] animate-float"
+        />
         <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-lilac-soft backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-lilac animate-pulse" />
           Turma 2 · Início 17 · 07 · 2026
@@ -155,15 +163,15 @@ function Authority() {
   return (
     <section id="autoridade" className="bg-gradient-soft py-28">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-[minmax(0,1fr)_1.2fr]">
-        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-accent shadow-elegant">
-          <div className="absolute inset-0 flex items-end p-8 text-white">
-            <div>
-              <div className="font-display text-2xl italic">Letícia Baccin</div>
-              <div className="text-sm text-white/80">Fundadora · Escola LIZ</div>
-            </div>
-          </div>
-          <div className="absolute right-4 top-4 rounded-full glass px-3 py-1 text-xs text-primary">
-            foto em breve
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl shadow-elegant">
+          <img
+            src={leticiaAsset.url}
+            alt="Letícia Kuchockowolec Baccin, fundadora da Escola LIZ"
+            className="absolute inset-0 h-full w-full object-cover object-top"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent p-8 text-white">
+            <div className="font-display text-2xl italic">Letícia Baccin</div>
+            <div className="text-sm text-white/80">Fundadora · Escola LIZ</div>
           </div>
         </div>
 
