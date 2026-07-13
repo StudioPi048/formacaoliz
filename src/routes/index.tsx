@@ -75,8 +75,9 @@ function Nav() {
   return (
     <header className="fixed top-0 z-50 w-full">
       <div className="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-full glass px-6 py-3">
-        <a href="#top" className="font-display text-xl tracking-tight text-primary">
-          Escola <span className="italic">LIZ</span>
+        <a href="#top" className="flex items-center gap-2.5 font-display text-xl tracking-tight text-primary">
+          <img src={logoAsset.url} alt="Escola LIZ" className="h-9 w-9 object-contain" />
+          Escola <span className="-ml-1 italic">LIZ</span>
         </a>
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
           <a href="#autoridade" className="hover:text-primary">Docente</a>
