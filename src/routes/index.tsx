@@ -55,21 +55,127 @@ const faqs = [
   { q: "Sou de fora do Brasil, posso participar?", a: "Sim. Temos tabela de investimento em euros e alunos formados em diversos países." },
 ];
 
+const testimonials = [
+  {
+    name: "Marina Alves",
+    role: "Psicóloga · SP",
+    text: "A Formação da Letícia reorganizou minha escuta clínica. A Árvore Sensitiva me deu uma leitura que nenhuma outra abordagem havia oferecido — meus pacientes chegam mais rápido na raiz.",
+  },
+  {
+    name: "Rafael Monteiro",
+    role: "Terapeuta Integrativo · RJ",
+    text: "As Chaves Clínicas são um divisor de águas. Saí da formação com um repertório terapêutico profundo, ético e absolutamente único. Impacto imediato no meu consultório.",
+  },
+  {
+    name: "Cláudia Ferreira",
+    role: "Aluna Turma 1 · PT",
+    text: "Mais do que um curso, é uma travessia. A Letícia conduz com uma presença rara — comecei buscando autoconhecimento e terminei encontrando o meu propósito de alma.",
+  },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <Hero />
+      <VideoSection />
       <Authority />
       <Pillars />
       <Structure />
       <ForWhom />
+      <Testimonials />
       <Pricing />
       <FAQ />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
+
+function WhatsAppButton() {
+  return (
+    <a
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Falar no WhatsApp"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full text-white shadow-elegant transition-all duration-300 hover:scale-110 hover:shadow-glow"
+      style={{ backgroundColor: "#25D366" }}
+    >
+      <svg viewBox="0 0 32 32" className="h-7 w-7" fill="currentColor" aria-hidden="true">
+        <path d="M16.003 3C9.373 3 4 8.373 4 15c0 2.383.696 4.6 1.892 6.47L4 29l7.735-1.86A11.94 11.94 0 0 0 16.003 27C22.633 27 28 21.627 28 15S22.633 3 16.003 3zm0 21.6c-1.86 0-3.596-.51-5.084-1.393l-.363-.216-4.59 1.103 1.122-4.474-.236-.376A9.55 9.55 0 0 1 6.4 15c0-5.293 4.31-9.6 9.603-9.6 5.293 0 9.6 4.307 9.6 9.6 0 5.293-4.307 9.6-9.6 9.6zm5.523-7.19c-.303-.152-1.79-.883-2.067-.983-.277-.101-.478-.152-.68.152-.202.303-.782.983-.958 1.185-.176.202-.353.227-.656.076-.303-.152-1.278-.47-2.434-1.5-.9-.802-1.507-1.79-1.683-2.094-.176-.303-.019-.467.133-.618.137-.136.303-.353.454-.53.152-.176.202-.303.303-.505.101-.202.05-.379-.025-.53-.076-.152-.68-1.638-.933-2.243-.246-.59-.497-.51-.68-.52l-.58-.01c-.202 0-.53.076-.807.379-.277.303-1.058 1.034-1.058 2.52 0 1.487 1.083 2.924 1.234 3.126.152.202 2.132 3.256 5.166 4.567.723.312 1.286.498 1.725.638.724.23 1.383.198 1.904.12.581-.086 1.79-.732 2.043-1.44.252-.706.252-1.312.176-1.44-.076-.126-.277-.202-.58-.353z"/>
+      </svg>
+    </a>
+  );
+}
+
+function VideoSection() {
+  return (
+    <section className="bg-background py-24">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="mb-10 text-center">
+          <span className="text-xs uppercase tracking-[0.25em] text-accent">Uma palavra da docente</span>
+          <h2 className="mt-3 font-display text-4xl leading-tight md:text-5xl">
+            Assista ao <em>convite</em> da Letícia
+          </h2>
+        </div>
+        <div className="relative aspect-video overflow-hidden rounded-3xl border border-border shadow-elegant">
+          <iframe
+            src="https://www.youtube.com/embed/jez_-ZYfygE?si=vP8Z4E7p9L3rW1T2&controls=1"
+            title="Convite Formação Psicogenealogia LIZ 2026"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section className="bg-gradient-soft py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs uppercase tracking-[0.25em] text-accent">Prova Social</span>
+          <h2 className="mt-3 font-display text-4xl leading-tight md:text-5xl">
+            Vozes de quem <em>atravessou</em>
+          </h2>
+        </div>
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {testimonials.map((t) => (
+            <figure
+              key={t.name}
+              className="relative rounded-2xl border border-border bg-card p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-elegant"
+            >
+              <span
+                aria-hidden="true"
+                className="absolute -top-6 left-6 font-display text-7xl leading-none text-primary"
+              >
+                &ldquo;
+              </span>
+              <blockquote className="mt-4 italic leading-relaxed text-muted-foreground">
+                {t.text}
+              </blockquote>
+              <figcaption className="mt-6 border-t border-border pt-4">
+                <div className="font-display text-lg text-foreground">{t.name}</div>
+                <div className="text-xs uppercase tracking-wider text-accent">{t.role}</div>
+              </figcaption>
+              <span
+                aria-hidden="true"
+                className="absolute bottom-2 right-6 font-display text-7xl leading-none text-primary"
+              >
+                &rdquo;
+              </span>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Nav() {
   return (
@@ -142,18 +248,22 @@ function Hero() {
           </a>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-6 border-t border-white/15 pt-8 text-left">
+        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
           {[
             ["+5.000", "alunos formados"],
             ["28 anos", "de trajetória da docente"],
             ["2 anos", "de acesso pela Hotmart"],
           ].map(([n, l]) => (
-            <div key={n}>
-              <div className="font-display text-3xl text-lilac-soft">{n}</div>
-              <div className="text-xs uppercase tracking-wider text-white/60">{l}</div>
+            <div
+              key={n}
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-white/10 hover:shadow-glow"
+            >
+              <div className="font-display text-3xl text-primary-glow">{n}</div>
+              <div className="mt-1 text-xs uppercase tracking-wider text-white/60">{l}</div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
@@ -193,10 +303,25 @@ function Authority() {
 
           <div className="mt-8 flex flex-wrap gap-2">
             {["TEDx", "Autora", "Você S/A", "O Globo", "Viva Saúde", "+5.000 alunos"].map((t) => (
-              <span key={t} className="rounded-full border border-border bg-white px-4 py-1.5 text-sm text-primary">
+              <span key={t} className="rounded-full border border-border bg-card px-4 py-1.5 text-sm text-primary">
                 {t}
               </span>
             ))}
+          </div>
+
+          <div className="mt-10 border-t border-border pt-8">
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Como visto em</div>
+            <div className="mt-5 flex flex-wrap items-center gap-x-10 gap-y-4">
+              <span className="font-display text-2xl italic text-muted-foreground grayscale transition hover:text-primary hover:grayscale-0">
+                Você <span className="not-italic">S/A</span>
+              </span>
+              <span className="font-display text-2xl uppercase tracking-widest text-muted-foreground grayscale transition hover:text-primary hover:grayscale-0">
+                TED<span className="text-primary">x</span>
+              </span>
+              <span className="font-display text-2xl italic text-muted-foreground grayscale transition hover:text-primary hover:grayscale-0">
+                O Globo
+              </span>
+            </div>
           </div>
         </div>
       </div>
