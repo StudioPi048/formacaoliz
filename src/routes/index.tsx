@@ -397,7 +397,7 @@ function Structure() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-border bg-white p-8">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
             <h3 className="font-display text-2xl text-ink">Decodificação de Nomes</h3>
             <p className="mt-3 text-muted-foreground">
               Compreenda o poder simbólico e vibracional dos nomes próprios.
