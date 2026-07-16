@@ -260,6 +260,10 @@ function Hero() {
         <img
           src={logoAsset.url}
           alt="Escola LIZ"
+          width={80}
+          height={80}
+          fetchPriority="high"
+          decoding="async"
           className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-[0_8px_30px_rgba(212,175,55,0.4)] animate-float"
         />
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary-glow backdrop-blur">
