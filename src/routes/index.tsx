@@ -5,6 +5,49 @@ import leticiaAsset from "@/assets/leticia-baccin.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: "Formação Psicogenealogia LIZ 2026 — Turma 2",
+          description:
+            "Formação online e ao vivo em Psicogenealogia Viva com Letícia Baccin. Turma 2 — início 17/07/2026.",
+          provider: {
+            "@type": "Organization",
+            name: "Escola LIZ",
+            sameAs: "https://formacaoliz.lovable.app",
+          },
+          inLanguage: "pt-BR",
+          educationalLevel: "Formação profissional",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Letícia Baccin",
+          jobTitle: "Fundadora — Escola LIZ",
+          worksFor: { "@type": "Organization", name: "Escola LIZ" },
+        }),
+      },
+    ],
+  }),
 });
 
 const WHATSAPP_URL =
@@ -77,15 +120,17 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
-      <Hero />
-      <VideoSection />
-      <Authority />
-      <Pillars />
-      <Structure />
-      <ForWhom />
-      <Testimonials />
-      <Pricing />
-      <FAQ />
+      <main>
+        <Hero />
+        <VideoSection />
+        <Authority />
+        <Pillars />
+        <Structure />
+        <ForWhom />
+        <Testimonials />
+        <Pricing />
+        <FAQ />
+      </main>
       <Footer />
       <WhatsAppButton />
     </div>
@@ -215,6 +260,10 @@ function Hero() {
         <img
           src={logoAsset.url}
           alt="Escola LIZ"
+          width={80}
+          height={80}
+          fetchPriority="high"
+          decoding="async"
           className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-[0_8px_30px_rgba(212,175,55,0.4)] animate-float"
         />
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary-glow backdrop-blur">
