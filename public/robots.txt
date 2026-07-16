@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://formacaoliz.lovable.app/sitemap.xml
