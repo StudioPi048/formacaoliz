@@ -5,6 +5,49 @@ import leticiaAsset from "@/assets/leticia-baccin.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: "Formação Psicogenealogia LIZ 2026 — Turma 2",
+          description:
+            "Formação online e ao vivo em Psicogenealogia Viva com Letícia Baccin. Turma 2 — início 17/07/2026.",
+          provider: {
+            "@type": "Organization",
+            name: "Escola LIZ",
+            sameAs: "https://formacaoliz.lovable.app",
+          },
+          inLanguage: "pt-BR",
+          educationalLevel: "Formação profissional",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Letícia Baccin",
+          jobTitle: "Fundadora — Escola LIZ",
+          worksFor: { "@type": "Organization", name: "Escola LIZ" },
+        }),
+      },
+    ],
+  }),
 });
 
 const WHATSAPP_URL =
