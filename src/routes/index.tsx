@@ -120,15 +120,17 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
-      <Hero />
-      <VideoSection />
-      <Authority />
-      <Pillars />
-      <Structure />
-      <ForWhom />
-      <Testimonials />
-      <Pricing />
-      <FAQ />
+      <main>
+        <Hero />
+        <VideoSection />
+        <Authority />
+        <Pillars />
+        <Structure />
+        <ForWhom />
+        <Testimonials />
+        <Pricing />
+        <FAQ />
+      </main>
       <Footer />
       <WhatsAppButton />
     </div>
